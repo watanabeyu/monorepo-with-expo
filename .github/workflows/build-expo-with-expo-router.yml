@@ -49,4 +49,4 @@ jobs:
       - name: 🚀 Build & submit mobile
         if: ${{ github.event.inputs.submit && github.event.inputs.profile == 'production' }}
         working-directory: apps/expo-with-expo-router
-        run: eas build --non-interactive --wait ${{ github.event.inputs.submit && '--auto-submit' }} --platform=${{ github.event.inputs.platform }} --profile=${{ github.event.inputs.profile }}
+        run: eas build --non-interactive --wait ${{ !!github.event.inputs.submit && '--auto-submit' }} --platform=${{ github.event.inputs.platform }} --profile=${{ github.event.inputs.profile }}
