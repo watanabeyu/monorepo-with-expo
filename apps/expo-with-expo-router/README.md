@@ -23,6 +23,8 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
 4. Create secrets `EXPO_TOKEN`
 
+5. if `EXPO_TOKEN` is Robot user, add the `owner:{owner_name}` in your app.config.ts
+
 In the output, you'll find options to open the app in a
 
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)
