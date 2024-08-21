@@ -4,17 +4,24 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
 ## Get started
 
+0. create `.env`
+
 1. Install dependencies
 
    ```bash
-   npm install
+   yarn install
    ```
 
-2. Start the app
+2. run app
 
    ```bash
-    npx expo start
+   yarn
+   yarn ios
    ```
+
+3. Change `app.config.ts` eas.projectId
+
+4. Create secrets `EXPO_TOKEN`
 
 In the output, you'll find options to open the app in a
 

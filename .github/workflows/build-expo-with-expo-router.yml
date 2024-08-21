@@ -35,18 +35,18 @@ jobs:
       - name: 🏗 Setup Expo
         uses: expo/expo-github-action@v8
         with:
-          eas-version: ${{ inputs.eas-version }}
+          eas-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
 
       - name: 📦 Install dependencies
         run: yarn install
 
-      - name: 🚀 Build mobile
+      - name: 🚀 Build app
         if: ${{ !github.event.inputs.submit || github.event.inputs.profile != 'production' }}
-        working-directory: apps/mobile
+        working-directory: apps/expo-with-expo-router
         run: eas build --non-interactive --wait --platform=${{ github.event.inputs.platform }} --profile=${{ github.event.inputs.profile }}
 
       - name: 🚀 Build & submit mobile
-        if: ${{ github.event.inputs.submit && github.event.inputs.profile != 'production' }}
-        working-directory: apps/mobile
+        if: ${{ github.event.inputs.submit && github.event.inputs.profile == 'production' }}
+        working-directory: apps/expo-with-expo-router
         run: eas build --non-interactive --wait --auto-submit --platform=${{ github.event.inputs.platform }} --profile=${{ github.event.inputs.profile }}
