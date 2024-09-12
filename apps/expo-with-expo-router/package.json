@@ -21,6 +21,7 @@
     "@expo/vector-icons": "^14.0.2",
     "@react-navigation/native": "^6.0.2",
     "@repo/ui": "^0.0.0",
+    "chance": "^1.1.12",
     "expo": "~51.0.26",
     "expo-build-properties": "^0.12.5",
     "expo-constants": "~16.0.2",
@@ -43,6 +44,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@types/chance": "^1.1.6",
     "@types/jest": "^29.5.12",
     "@types/react": "~18.2.45",
     "@types/react-test-renderer": "^18.0.7",

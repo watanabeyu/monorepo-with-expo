@@ -2262,6 +2262,11 @@
   dependencies:
     "@babel/types" "^7.20.7"
 
+"@types/chance@^1.1.6":
+  version "1.1.6"
+  resolved "https://registry.npmjs.org/@types/chance/-/chance-1.1.6.tgz"
+  integrity sha512-V+pm3stv1Mvz8fSKJJod6CglNGVqEQ6OyuqitoDkWywEODM/eJd1eSuIp9xt6DrX8BWZ2eDSIzbw1tPCUTvGbQ==
+
 "@types/cookie@^0.6.0":
   version "0.6.0"
   resolved "https://registry.npmjs.org/@types/cookie/-/cookie-0.6.0.tgz"
@@ -3587,6 +3592,11 @@ chalk@^4.0.0, chalk@^4.1.0, chalk@^4.1.2:
   dependencies:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
+
+chance@^1.1.12:
+  version "1.1.12"
+  resolved "https://registry.npmjs.org/chance/-/chance-1.1.12.tgz"
+  integrity sha512-vVBIGQVnwtUG+SYe0ge+3MvF78cvSpuCOEUJr7sVEk2vSBuMW6OXNJjSzdtzrlxNUEaoqH2GBd5Y/+18BEB01Q==
 
 char-regex@^1.0.2:
   version "1.0.2"
@@ -5092,6 +5102,7 @@ expo-web-browser@~13.0.3:
     "@expo/vector-icons" "^14.0.2"
     "@react-navigation/native" "^6.0.2"
     "@repo/ui" "^0.0.0"
+    chance "^1.1.12"
     expo "~51.0.26"
     expo-build-properties "^0.12.5"
     expo-constants "~16.0.2"
