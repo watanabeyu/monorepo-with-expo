@@ -4,15 +4,16 @@
   "version": "1.0.0",
   "scripts": {
     "reset-project": "node ./scripts/reset-project.js",
-    "android": "expo run:android",
+    "android": "npm run prebuild && expo run:android",
     "prebuild": "expo prebuild --clean",
-    "ios": "expo run:ios",
+    "ios": "npm run prebuild && expo run:ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
     "lint": "expo lint",
     "build": "eas build --platform all",
     "build:ios": "eas build --auto-submit --platform ios",
-    "build:android": "eas build --platform android"
+    "build:android": "eas build --platform android",
+    "postinstall": "node ./scripts/module-copy.js"
   },
   "jest": {
     "preset": "jest-expo"
