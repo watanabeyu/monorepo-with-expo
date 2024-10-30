@@ -62,4 +62,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       projectId: "ed67d152-dbfa-44cb-95cb-3417ae683509",
     },
   },
+  runtimeVersion: {
+    policy: "appVersion",
+  },
 });
