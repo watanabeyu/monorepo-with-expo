@@ -1,0 +1,18 @@
+suppress_xcode_output(true)
+clean(true)
+
+scheme("app")
+
+export_options({
+  method: "app-store",
+  provisioningProfiles: {
+    "jp.ewaf.sample.shareextension" => "c983767d-92e2-4ffe-8796-ec58c2c2944e"
+  }
+})
+
+export_xcargs "OTHER_CODE_SIGN_FLAGS=\"--keychain /tmp/path/to/keychain\""
+
+disable_xcpretty(true)
+
+output_directory("./build")
+output_name("App")
