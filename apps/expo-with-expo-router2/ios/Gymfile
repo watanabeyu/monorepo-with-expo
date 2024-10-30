@@ -1,7 +1,7 @@
 suppress_xcode_output(true)
 clean(true)
 
-scheme("app")
+scheme("expowithexporouter2")
 
 export_options({
   method: "app-store",

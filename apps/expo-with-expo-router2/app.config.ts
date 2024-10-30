@@ -22,6 +22,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     config: {
       usesNonExemptEncryption: false,
     },
+    runtimeVersion: "1.0.0",
   },
   android: {
     adaptiveIcon: {
