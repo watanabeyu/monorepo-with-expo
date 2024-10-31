@@ -21,6 +21,9 @@
   "submit": {
     "production": {
       "ios": {
+        "appleId": "fight.ippatu5648@gmail.com",
+        "ascAppId": "QZ3U23XYB8",
+        "appleTeamId": "7CQNGSCHR5",
         "metadataPath": "./store.config.json"
       }
     }
