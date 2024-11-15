@@ -1,5 +1,10 @@
 import { Image, Alert, ScrollView, Text, View, FlatList } from "react-native";
-import { useLocalSearchParams, useNavigation } from "expo-router";
+import {
+  Link,
+  useLocalSearchParams,
+  useNavigation,
+  useRouter,
+} from "expo-router";
 import { TouchableOpacity } from "react-native";
 import { generateData } from "@/src/utils";
 import { useEffect } from "react";
@@ -18,6 +23,7 @@ export default function ItemDetailScreen() {
     shipping = "",
   } = useLocalSearchParams();
   const navigation = useNavigation();
+  const router = useRouter();
 
   const handleBuyNow = () => {
     Alert.alert("購入確認", "商品を購入しますか？", [
@@ -88,7 +94,9 @@ export default function ItemDetailScreen() {
       >
         <TouchableOpacity
           style={tw`bg-red-500 p-4 rounded-lg items-center mt-5`}
-          onPress={handleBuyNow}
+          onPress={() => {
+            router.push("/(tabs)/twrnc/modal");
+          }}
         >
           <Text style={tw`text-lg text-white font-bold`}>今すぐ購入</Text>
         </TouchableOpacity>
