@@ -5,6 +5,7 @@ import { generateData } from "@/src/utils";
 import { useEffect } from "react";
 import { ItemCard } from "@/src/components/ItemCardNativeWind";
 import tw from "twrnc"; // twrnc をインポート
+import { MotiView } from "moti";
 
 export default function ItemDetailScreen() {
   const {
@@ -78,6 +79,20 @@ export default function ItemDetailScreen() {
       >
         <Text style={tw`text-lg text-white font-bold`}>今すぐ購入</Text>
       </TouchableOpacity>
+
+      <MotiView
+        from={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ type: "timing", repeat: -1 }}
+        style={tw`p-10`}
+      >
+        <TouchableOpacity
+          style={tw`bg-red-500 p-4 rounded-lg items-center mt-5`}
+          onPress={handleBuyNow}
+        >
+          <Text style={tw`text-lg text-white font-bold`}>今すぐ購入</Text>
+        </TouchableOpacity>
+      </MotiView>
 
       <Text style={tw`text-xl font-bold mt-8 mb-5 text-gray-800`}>
         関連商品
